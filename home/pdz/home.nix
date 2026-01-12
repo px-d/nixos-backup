@@ -38,6 +38,7 @@
     lsd
     fzf
     bat
+    nodejs_24
   ];
 
   home.file = {
@@ -58,7 +59,7 @@
     };
     "org/gnome/desktop/input-sources" = {
       show-all-sources = true;
-      sources = [ (lib.hm.gvariant.mkTuple[ "xkb" "eu" ]) ];
+      # sources = [ (lib.hm.gvariant.mkTuple[ "xkb" "eu" ]) ];
       xkb-options = [ "caps:escape" ];
     };
   };
@@ -102,13 +103,16 @@
 
     git = {
       enable = true;
-      userName = "px-d";
-      userEmail = "philip@dziubinsky.de";
-      extraConfig = {
+
+      settings = {
+        user = {
+          email = "philip@dziubinsky.de";
+          name = "Philip Dziubinsky";
+        };
         init = {
           defaultBranch = "main";
         };
-      };
+      };     
     };
 
     starship = {

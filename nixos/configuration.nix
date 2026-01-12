@@ -106,6 +106,7 @@
       discord-ptb
       ghostty
       google-chrome
+      dbeaver-bin
     ];
   };
   
